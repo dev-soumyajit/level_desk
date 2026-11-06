@@ -24,7 +24,7 @@ Marketplace identification is uncertain: the structure resembles common Meesho e
 
 [PDFDocument.embedPage](https://pdf-lib.js.org/docs/api/classes/pdfdocument#embedpage) accepts a clipping bounding box. [PDFPage.drawPage](https://pdf-lib.js.org/docs/api/classes/pdfpage#drawpage) supports scaling, rotation and translation. The exporter converts a visible crop back to PDF coordinates, embeds it into new pages, and fits proportionally. Original vector drawing commands are preserved rather than rasterizing shipping codes. Output uses PrintScaling.None as a viewer hint; printer settings still need to be checked.
 
-A clipping boundary is not redaction: underlying source content can remain embedded in the output. This is disclosed in the in-app guide and README. The app does not claim to remove customer/invoice data securely.
+
 
 ## Framework and device behavior
 
