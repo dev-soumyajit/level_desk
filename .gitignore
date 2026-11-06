@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+public/pdfjs/
+test-results/
+playwright-report/
+.env*
+artifacts/
+sample-page-*.png
+
