@@ -4,10 +4,10 @@ A responsive Next.js + TypeScript workspace for cropping ecommerce shipping labe
 
 ## Run locally
 
-Requires Node.js 20.19+ (Node.js 22 or 24 recommended) and npm.
+Use Node.js 22.x and npm, matching the configured Vercel runtime.
 
 ```powershell
-npm.cmd install
+npm.cmd ci
 npm.cmd run dev
 ```
 
@@ -47,6 +47,7 @@ Single-label and A4 layouts automatically rotate crops for the largest proportio
 ## Checks
 
 ```powershell
+npm.cmd run check:lock
 npm.cmd run typecheck
 npm.cmd test
 npm.cmd run build
@@ -104,3 +105,7 @@ Read [docs/vendor-workflow.md](docs/vendor-workflow.md) for the complete workflo
 The app uses source-owned shadcn/ui Base UI components (`src/components/ui`) with Tailwind CSS 4 and the existing green theme. All dropdowns share a viewport-bounded, scrollable Select with wrapping option descriptions. Main buttons, text/number inputs and textareas use the component layer. Responsive typography is defined once using fluid rem-based tokens; mobile editable fields keep a readable 1rem size.
 
 The `components.json` file supports further shadcn component additions. Source components were installed manually using locally available dependency packages; `package-lock.json` includes the required dependencies for npm installs.
+
+## Vercel installation
+
+Use the current `package-lock.json`; the stale Bun lock has been removed. `vercel.json` validates the lockfile, runs `npm ci`, and then builds with Node 22.x. See [docs/deployment.md](docs/deployment.md) for the dependency-install fix and redeploy steps. Push the changed files and the lockfile deletion before redeploying; the old Git commit retains the old error.

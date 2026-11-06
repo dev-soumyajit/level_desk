@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "node scripts/check-lockfile.mjs && npm ci",
+  "buildCommand": "npm run build"
+}
